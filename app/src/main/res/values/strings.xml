@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">dropblockright</string>
+    <string name="todo" />
+    <string name="welcome_string" />
+    <string name="newgame">newgame</string>
+    <string name="highscores">highscores</string>
+    <string name="settings">settings</string>
+
+    <string name="game_score_string" />
+    <string name="gameover">GAMEOVER!</string>
+    <string name="action_settings" />
+</resources>

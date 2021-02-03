@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.light.dropblockright">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/icon"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme">
+      
+        <activity
+            android:name="com.light.dropblockright.MainActivity"
+            android:label="@string/app_name"
+            android:configChanges="orientation">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name="com.light.dropblockright.SettingsActivity"
+            android:label="dropblock"
+            android:parentActivityName="com.light.dropblockright.MainActivity"
+            android:configChanges="orientation">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.light.dropblockright.MainActivity" />
+        </activity>
+
+        <activity
+            android:name="com.light.dropblockright.SettingsHighscoresActivity"
+            android:label="dropblock"
+            android:parentActivityName="com.light.dropblockright.HighScoresActivity"
+            android:configChanges="orientation">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.light.dropblockright.MainActivity" />
+        </activity>
+        <activity
+            android:name="com.light.dropblockright.HighScoresActivity"
+            android:label="@string/app_name"
+            android:parentActivityName="com.light.dropblockright.MainActivity"
+            android:configChanges="orientation">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.light.dropblockright.MainActivity" />
+        </activity>
+        <activity
+            android:name="com.light.dropblockright.GameActivity"
+            android:label="@string/app_name"
+            android:parentActivityName="com.light.dropblockright.MainActivity"
+            android:configChanges="orientation"
+            android:screenOrientation="fullSensor">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.light.dropblockright.MainActivity" />
+        </activity>
+
+        <provider
+            android:name="com.light.dropblockright.HighScoresContentProvider"
+            android:exported="false"
+            android:permission="signature"
+            android:readPermission="true"
+            android:writePermission="true"
+            android:authorities="com.light.dropblockright.contentprovider" />
+    </application>
+
+</manifest>
